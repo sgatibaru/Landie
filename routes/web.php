@@ -14,6 +14,8 @@
 
 Route::get('/','TenantsController@index');
 
+Route::get('simulateRent','SimulateControlller@SimulateRent');
+
 Route::get('/houses','HousesController@index')->name('getHouses');
 Route::post('/addHouse','HousesController@store')->name('addHouse');
 Route::get('/getTenants','TenantsController@index')->name('getTenants');

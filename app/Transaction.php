@@ -12,7 +12,7 @@ class Transaction extends Model
     const STATUS_FAILED = 2;
 
 protected $fillable = [
-    'status', 'invoice', 'transaction_number', 'transaction_time', 'amount', 'short_code', 'bill_reference',
+    'status', 'transaction_number', 'transaction_time', 'amount', 'short_code', 'bill_reference',
     'mobile_number', 'payer_first_name', 'payer_middle_name', 'payer_last_name'
 ];
 }

@@ -1,0 +1,20 @@
+Add Rooms.
+Add Tenants CRUD,
+view payment status of a tenant
+Send notification on every end month for reminder
+Send notification of payment received
+Send notification of late Payment
+
+
+login
+
+A tenant pays rent via mpesa paybill and uses his contact as an account number, the program
+then first searches from the tenants db for such a phone number, if the phone number exists, it
+proceeds to accept the payment, and create database with the phone number as a bill reference number.
+
+If a payment is paid by a tenant, then the program updates the tenants rent payment for the month.
+The program will have a mind of its own, knowing what to expect for each month that there is in a year
+and will constantly calculate the balance and the overpay.
+
+1. Program should understand the times of the year and months
+2. Program should understand the payment system

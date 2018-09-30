@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tenants;
+use App\Houses;
 use Illuminate\Http\Request;
 
 class TenantsController extends Controller
@@ -16,8 +17,17 @@ class TenantsController extends Controller
     {
         //
         $tenants = Tenants::paginate(15);
+        $rooms = Houses::all();
 
-        return view('landlord.partials.home',compact('tenants'));
+        // $nexmo = app('Nexmo\Client');
+        //
+        // $nexmo->message()->send([
+        //     'to'   => '+254719546525',
+        //     'from' => '+254719546525',
+        //     'text' => 'This is a test message to verify payment of rent.'
+        // ]);
+
+        return view('landlord.partials.home',compact('tenants','rooms'));
     }
 
     /**
@@ -42,7 +52,7 @@ class TenantsController extends Controller
         $tenant = new Tenants();
         $tenant->username = $request->username;
         $tenant->email = $request->email;
-        $tenant->roomnumber = $request->roomnumber;
+        $tenant->houses_id= $request->roomnumber;
         $tenant->contact = $request->contact;
 
         $tenant->save();

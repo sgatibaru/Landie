@@ -31,13 +31,16 @@
                       <input type="contact" class="form-control" id="inputEmail3" name="contact" placeholder="Phone Number">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">Room Number</label>
+                  <label from="inputEmail3" class="col-sm-2 control-lable">Room Number</label>
+                  <div class="col-sm-10">
+                   <select class="form-control" name="roomnumber" placeholder="roomnumber">
+                     @foreach($rooms as $room)
+                        <option value="{{ $room->id }}" >{{ $room->housenumber }}</option>
+                      @endforeach
 
-                    <div class="col-sm-10">
-                      <input type="number" class="form-control" name="roomnumber"  id="inputPassword3" placeholder="Room Number">
-                    </div>
-                  </div>
+                   </select>
+                 </div>
+              </div>
                 <!-- /.box-body -->
 
 

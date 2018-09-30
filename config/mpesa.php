@@ -42,14 +42,14 @@ return [
     'accounts' => [
         'staging' => [
             'sandbox' => true,
-            'key' => '',
-            'secret' => '',
+            'key' => 'kRGk5Ah0bI8ZFyWm83hZFwXRtLatiFNC',
+            'secret' => 'VjpH5m2WLRwVYJqn',
             'initiator' => 'apitest363',
-            'id_validation_callback' => 'http://example.com/callback?secret=some_secret_hash_key',
+            'id_validation_callback' => 'http://cbef486f.ngrok.io/mpesa/validate',
             'lnmo' => [
                 'shortcode' => 174379,
                 'passkey' => 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919',
-                'callback' => 'http://example.com/callback?secret=some_secret_hash_key',
+                'callback' => 'http://cbef486f.ngrok.io/mpesa/confirm',
             ]
         ],
 

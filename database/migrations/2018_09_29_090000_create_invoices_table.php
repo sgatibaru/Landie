@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTenantsTable extends Migration
+class CreateInvoicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateTenantsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tenants', function (Blueprint $table) {
+        Schema::create('invoices', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('houses_id')->unsigned()->index();
-            $table->foreign('houses_id')->references('id')->on('houses')->onDelete('cascade');
-            $table->string('username');
-            $table->string('email');
-            $table->string('contact');
+            $table->string('invoicenumber');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateTenantsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tenants');
+        Schema::dropIfExists('invoices');
     }
 }

@@ -22,5 +22,6 @@ class VerifyCsrfToken extends Middleware
         //
         '/mpesa/confirm',
        '/mpesa/validate',
+       'api/*',
     ];
 }
