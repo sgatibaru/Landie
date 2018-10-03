@@ -20,6 +20,8 @@ class CreateTenantsTable extends Migration
             $table->string('username');
             $table->string('email');
             $table->string('contact');
+            $table->double('paid')->default(0);
+            $table->double('balance')->default(0);
             $table->timestamps();
         });
     }

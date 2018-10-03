@@ -95,4 +95,14 @@ class TransactionController extends Controller
       ]);
 
     }
+
+    // create a function to update a tenants table upon payment of rent
+    
+    // public function updateTenant($request){
+    //   $tenant_details = Tenants::where('contact',$request->billrefnumber);
+    //
+    //   $tenant_details->paid = $tenant_detaild->paid + $request->amount;
+    //
+    //   $tenant_detials->save();
+    // }
 }

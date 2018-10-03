@@ -8,7 +8,7 @@ use App\Tenants;
 class Houses extends Model
 {
     //
-    public function tenants(){
+    public function tenant(){
       return $this->belongsTo(Tenants::class);
     }
 }
